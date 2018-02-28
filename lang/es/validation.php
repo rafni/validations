@@ -14,6 +14,7 @@ return [
     */
 
     'uppercase'             => 'El :attribute debe estar en mayúsculas.',
-    'phone'                 => 'El :attribute debe ser un número de teléfono'
+    'phone'                 => 'El :attribute debe ser un número de teléfono.',
+    'alpha'                 => 'El :attribute solo puede contener caracteres alfabéticos, guiones y espacios en blanco.',
 
 ];
