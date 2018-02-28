@@ -15,6 +15,7 @@ return [
 
     'uppercase'             => 'The :attribute must be uppercase.',
     'phone'                 => 'The :attribute must be a telephone number.',
-    'alpha'                 => 'The :attribute may only contain alphabetic characters, dashes and blank spaces.',
+    'alpha'                 => 'The :attribute may only contain letters, dashes and blank spaces.',
+    'long_text'             => 'The :attribute may only contain letters, numbers, spaces and punctuation characters.'
     
 ];
