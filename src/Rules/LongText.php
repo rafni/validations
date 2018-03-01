@@ -25,7 +25,7 @@ class LongText implements Rule
      */
     public function passes($attribute, $value)
     {
-        return preg_match('/^[A-Za-z0-9áéíóúüÁÉÍÓÚÜñÑ \:\;\,\.\-\_\!\¡\?\¿\'\"\€\@\*]+$/', $value);
+        return preg_match('/^[A-Za-z0-9ÁÀÂÄÃÅĄáàäãåąŒÆßÇĆČčćçÉÈÊĖĘËéèêęëėÍÌÎÏĮíìîįîïŁłŃńÓÒÔÖÕØóòôöõøŠšÚÙÛÜŲŪúùûüųūŸÝÿýŻŹżźÑñŽž∂ð \-\':;,._!¡?¿"€@*]+$/', $value);
     }
 
     /**
