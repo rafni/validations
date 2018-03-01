@@ -25,7 +25,7 @@ class Alpha implements Rule
      */
     public function passes($attribute, $value)
     {
-        return preg_match('/^[A-Za-záÁéÉíÍóÓúÚüÜ\- ]+$/', $value);
+        return preg_match('/^[A-Za-záÁéÉíÍóÓúÚüÜñÑ\- ]+$/', $value);
     }
 
     /**
