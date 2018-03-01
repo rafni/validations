@@ -18,5 +18,6 @@ return [
     'alpha'                 => 'El :attribute solo puede contener letras, guiones y espacios en blanco.',
     'long_text'             => 'El :attribute solo puede contener letras, números, espacios y caracteres de puntuación.',
     'hexadecimal_color'     => 'El :attribute debe ser un color hexadecimal.',
+    'strong_password'       => 'La :attribute debe contener letras mayúsculas, minúsculas, números y caracteres especiales con una longitud mínima de ocho caracteres',
 
 ];
