@@ -7,22 +7,19 @@ use Illuminate\Contracts\Validation\Rule;
 class Phone implements Rule
 {
     /**
-     * @var string
+     * @var string|bool
      */
-    private $expr;
+    private $international_prefix;
     
     /**
      * Create a new rule instance.
      *
+     * @param string|bool $international_prefix
      * @return void
      */
-    public function __construct($international_prefix = 34)
+    public function __construct($international_prefix = true)
     {
-        $expr_ext = '';
-        if ($international_prefix) {
-            $expr_ext = '(\+?'.$international_prefix.'([ \t|\-])?)?';
-        }
-        $this->expr = '/^('.$expr_ext.'[9|6|7]((\d{1}([ \t|\-])?[0-9]{3})|(\d{2}([ \t|\-])?[0-9]{2}))([ \t|\-])?[0-9]{2}([ \t|\-])?[0-9]{2})$/';
+        $this->international_prefix = $international_prefix;
     }
 
     /**
@@ -34,7 +31,15 @@ class Phone implements Rule
      */
     public function passes($attribute, $value)
     {
-        return preg_match($this->expr, $value);
+        $international_pattern = '(\+?\d+([ |\-])?)?';
+        if ($this->international_prefix === false) {
+            $international_pattern = '';
+        } elseif ($this->international_prefix !== true && $this->international_prefix !== false) {
+            $international_pattern = '(\+?'.$this->international_prefix.'([ \t|\-])?)?';
+        }
+        $pattern = '/^('.$international_pattern.'[9|6|7]((\d{1}([ \t|\-])?[0-9]{3})|(\d{2}([ \t|\-])?[0-9]{2}))([ \t|\-])?[0-9]{2}([ \t|\-])?[0-9]{2})$/';
+        
+        return preg_match($pattern, $value);
     }
 
     /**

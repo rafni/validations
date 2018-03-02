@@ -15,6 +15,9 @@ return [
 
     'uppercase'             => 'The :attribute must be uppercase.',
     'phone'                 => 'The :attribute must be a telephone number.',
+    'regional_phone'        => [
+        'spain' => 'The :attribute must be a spanish telephone number.',
+    ],
     'alpha'                 => 'The :attribute may only contain letters, dashes and blank spaces.',
     'long_text'             => 'The :attribute may only contain letters, numbers, spaces and punctuation characters.',
     'hexadecimal_color'     => 'The :attribute must be a hexadecimal color.',

@@ -15,6 +15,9 @@ return [
 
     'uppercase'             => 'El :attribute debe estar en mayúsculas.',
     'phone'                 => 'El :attribute debe ser un número de teléfono.',
+    'regional_phone'        => [
+        'spain' => 'El :attribute debe ser un número de teléfono español.',
+    ],
     'alpha'                 => 'El :attribute solo puede contener letras, guiones y espacios en blanco.',
     'long_text'             => 'El :attribute solo puede contener letras, números, espacios y caracteres de puntuación.',
     'hexadecimal_color'     => 'El :attribute debe ser un color hexadecimal.',
