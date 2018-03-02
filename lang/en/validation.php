@@ -19,5 +19,6 @@ return [
     'long_text'             => 'The :attribute may only contain letters, numbers, spaces and punctuation characters.',
     'hexadecimal_color'     => 'The :attribute must be a hexadecimal color.',
     'strong_password'       => 'The :attribute must contain uppercase letters, lowercase, numbers and special characters with a minimum length of eight characters.',
+    'nif_nie'               => 'The :attribute must be a valid Spanish DNI/NIE.',
     
 ];
