@@ -1,10 +1,10 @@
 <?php
 
-namespace Rafni\Validations\Tests;
+namespace Rafni\Validations\Tests\Countries\Spain;
 
 use Tests\TestCase;
 use Illuminate\Validation\Factory as Validator;
-use Rafni\Validations\Rules\NifNie;
+use Rafni\Validations\Rules\Countries\Spain\NifNie;
 
 final class NifNieTest extends TestCase
 {

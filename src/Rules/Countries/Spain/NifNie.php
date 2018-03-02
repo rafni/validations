@@ -1,6 +1,6 @@
 <?php
 
-namespace Rafni\Validations\Rules;
+namespace Rafni\Validations\Rules\Countries\Spain;
 
 use Illuminate\Contracts\Validation\Rule;
 
